@@ -60,3 +60,9 @@ app.post('/netflix/search', function(req, res) {//for this to work REQ is before
 //         });
 //     })
 // })
+
+PORT = process.env.PORT || 80;
+
+app.listen(PORT, function(){
+    console.log('listening to events on a "port".')
+});
