@@ -19,8 +19,8 @@ app.use(bp.urlencoded({ extended: true }));
 app.use(cors());
 //connecting mongo server to database, port 27017 also adding error handling which
 //starts after url line
-//var url = "mongodb://heroku_4jfc377n:7qdf5pdcofimdgror03ta398vp@ds029735.mlab.com:29735/heroku_4jfc377n";
-var url = 'mongodb://localhost:27017/netflix'//also translates to mongoURL
+var url = "mongodb://heroku_4jfc377n:7qdf5pdcofimdgror03ta398vp@ds029735.mlab.com:29735/heroku_4jfc377n";
+//var url = 'mongodb://localhost:27017/netflix'//also translates to mongoURL
 // port that we will use mongo
 var MongoClient = mongodb.MongoClient;
 
