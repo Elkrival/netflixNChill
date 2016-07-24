@@ -1,21 +1,31 @@
 {
-  "name": "netflixnchill",
+  "name": "netflix-n-chill",
   "version": "1.0.0",
-  "description": "find streamable content you want to watch before you get home",
+  "description": "netflix n chill",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    "start": "node server.js"
-  },
-  "author": "Ivan Trujillo",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
     "cors": "^2.7.1",
     "express": "^4.14.0",
     "md5": "^2.1.0",
     "mongodb": "^2.2.4",
+    "nodemon": "^1.9.2",
     "request": "^2.73.0",
     "unirest": "^0.5.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elkrival/netflixNChill.git"
+  },
+  "author": "Ivan Trujillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elkrival/netflixNChill/issues"
+  },
+  "homepage": "https://github.com/Elkrival/netflixNChill#readme"
 }

@@ -2,20 +2,21 @@ console.log('hey boo');
     var resArr = [];
     var movObj = {};
     var submit = document.getElementById('submit').addEventListener('click', function(ev){
+        ev.preventDefault();
     var input = document.getElementById('input');
         inputValue = input.value;
-        var url = 'https://dry-garden-88596.herokuapp.com/';//production
-        //var url = 'http://localhost:3000';//local
+        //var url = 'https://dry-garden-88596.herokuapp.com/';//production
+        var url = 'http://localhost:3000/';
         var data = {
             input: inputValue
         };
         console.log(data);
         $.ajax({
-            url: url + '/netflix/list',
+            url: url + 'netflix/search',
             method: 'POST',
             data: data,
-            dataType: 'JSON'
-        }).done(function(response) {
+            dataType: 'json'
+    }).done(function(response) {
 
             movieObj(response);
             movData(resArr)
@@ -47,8 +48,10 @@ function movieObj(response) {
              divs.classList.add('stats');
              ul = document.createElement('ul');
              favorites = document.createElement('button');
+             favorites.setAttribute('id', "fave" + i);
              favorites.classList.add('buttons');
              deletes = document.createElement('button');
+             deletes.setAttribute('id', "dele" + i);
              deletes.classList.add('buttons');
              fButton = document.createTextNode('Add to Chill');
              dButton = document.createTextNode('No Chill');
