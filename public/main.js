@@ -4,7 +4,8 @@ console.log('hey boo');
     var submit = document.getElementById('submit').addEventListener('click', function(ev){
     var input = document.getElementById('input');
         inputValue = input.value;
-        var url = 'http://localhost:3000';
+        var url = 'https://dry-garden-88596.herokuapp.com/';//production
+        //var url = 'http://localhost:3000';//local
         var data = {
             input: inputValue
         };

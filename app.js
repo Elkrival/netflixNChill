@@ -10,7 +10,7 @@ var request = require("request");
 var ObjectID = mongodb.ObjectID;
 //UNOGS KEY
 var UNOG_SKEY = process.env.UNOGS_KEY;
-
+heroku config:set UNOG-SKEY = process.env.UNOGS_KEY
 //naming the collection to store the database
 var NETFLIX_N_CHILL_COLLECTION = "netflix";
 //setting app variable to express
@@ -22,7 +22,7 @@ app.use(bp.urlencoded({ extended: true }));
 app.use(cors());
 //connecting mongo server to database, port 27017 also adding error handling which
 //starts after url line
-var url = 'mongodb://localhost:27017/netflix_project';
+var url = "mongodb://heroku_4jfc377n:7qdf5pdcofimdgror03ta398vp@ds029735.mlab.com:29735/heroku_4jfc377n";
 // port that we will use mongo
 mongodb.MongoClient.connect(process.env.MONGODB_URL || url, function(err, database){
     //error handling starts here
@@ -59,4 +59,10 @@ app.post('/netflix/list', function(req, res) {//for this to work REQ is before R
             res.send(result.body);
             console.log(res.send)
         })
+});
+
+PORT = process.env.PORT || 80;
+
+app.listen(PORT, function(){
+    console.log('listening to events on a "port".')
 });
